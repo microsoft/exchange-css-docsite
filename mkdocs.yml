@@ -1,4 +1,5 @@
 site_name: CSS Wuxi MW Exchange Support Doc Site
+
 theme:
   name: material
   palette:
@@ -12,3 +13,8 @@ theme:
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
+
+nav:
+  - Welcome: index.md
+  - Exchange: 
+    - 'Temporary Authentication Failure': ./exchange/454-temporary-authentication-failure.md
