@@ -1,14 +1,12 @@
-# Project
+# CSS Wuxi MW Exchange Support Doc Site
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+A Doc Site to host MW Exchange related supporting documents for CSS Wuxi.
 
-As the maintainer of this project, please make a few updates:
+## Commands
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+- `mkdocs serve` - Start the live-reloading docs server.
+- `mkdocs build` - Build the documentation site.
+- `mkdocs -h` - Print help message and exit.
 
 ## Contributing
 
