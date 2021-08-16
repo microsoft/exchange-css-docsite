@@ -1,3 +1,14 @@
 site_name: CSS Wuxi MW Exchange Support Doc Site
 theme:
   name: material
+  palette:
+    - scheme: default
+      primary: blue
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
