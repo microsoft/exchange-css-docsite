@@ -1,0 +1,8 @@
+# MkDocs builds
+site/
+
+# IDE config
+.vscode/
+
+# Miscellaneous
+.DS_Store
