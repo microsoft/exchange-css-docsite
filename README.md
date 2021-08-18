@@ -2,6 +2,10 @@
 
 A Doc Site to host MW Exchange related supporting documents for CSS Wuxi.
 
+## Maintainers
+
+Maintained by Tony Wu and Molly Xu
+
 ## Commands
 
 - `mkdocs serve` - Start the live-reloading docs server.
