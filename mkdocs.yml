@@ -18,3 +18,4 @@ nav:
   - Welcome: index.md
   - Exchange: 
     - 'Temporary Authentication Failure': ./exchange/454-temporary-authentication-failure.md
+  - Molly: ./hello.md
