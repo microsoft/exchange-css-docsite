@@ -1,5 +1,7 @@
 # CSS Wuxi MW Exchange Support Doc Site
 
+[![Deploy to GitHub Pages](https://github.com/microsoft/exchange-css-docsite/actions/workflows/deploy-gh.yml/badge.svg)](https://github.com/microsoft/exchange-css-docsite/actions/workflows/deploy-gh.yml)
+
 A Doc Site to host MW Exchange related supporting documents for CSS Wuxi.
 
 ## Maintainers
