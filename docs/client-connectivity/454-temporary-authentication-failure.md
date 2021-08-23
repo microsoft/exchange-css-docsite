@@ -1,6 +1,8 @@
-# 站点的AD-Trust-损坏导致Kerberos验证失败 | 454 4.7.0 Temporary Authentication Failure
-
-***Case ID: 17388217***
+---
+title: "454 4.7.0 Temporary Authentication Failure"
+description: "站点的AD Trust损坏导致Kerberos验证失败"
+caseIds: ["17388217"]
+---
 
 ## 问题描述
 
@@ -137,10 +139,7 @@ NETDOM TRUST <parent domain> /Domain:<child domain> /UserD:<child domain admin>/
 
 在等待两个域的DC成功复制到变更后，Trust 验证成功并且之前出现的AD报错消失。邮件流恢复正常。
 
-## Q&As
+## 常见问题
 
-> ***Q: 如何验证AD Trust？***
-
-> A:
-> `NLTEST` to [test the trust relationship between a workstation and domain](https://social.technet.microsoft.com/wiki/contents/articles/16067.nltest-to-test-the-trust-relationship-between-a-workstation-and-domain.aspx)
-> Use `NLTEST` to [test domain trust relationship](https://gallery.technet.microsoft.com/Use-NLTEST-to-test-domain-1a752686)
+??? faq "如何验证AD Trust？"
+    Use `NLTEST` to [test the trust relationship between a workstation and domain](https://social.technet.microsoft.com/wiki/contents/articles/16067.nltest-to-test-the-trust-relationship-between-a-workstation-and-domain.aspx) and to [test domain trust relationship](https://gallery.technet.microsoft.com/Use-NLTEST-to-test-domain-1a752686)

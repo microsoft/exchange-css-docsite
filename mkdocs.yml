@@ -22,7 +22,13 @@ markdown_extensions:
   - pymdownx.superfences
 
 nav:
-  - Welcome: index.md
-  - Exchange: 
-    - 'Temporary Authentication Failure': ./exchange/454-temporary-authentication-failure.md
-  - Molly: ./hello.md
+  - Administration: empty.md
+  - "Client Connectivity":
+     - ./client-connectivity/454-temporary-authentication-failure.md
+  - Compliance: empty.md
+  - Development: empty.md
+  - "Distribution Lists": empty.md
+  - "Mail Flow": empty.md
+  - Migration: empty.md
+  - "Public Folders": empty.md
+  - Setup: empty.md
