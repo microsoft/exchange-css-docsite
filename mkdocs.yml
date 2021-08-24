@@ -1,34 +1,41 @@
 site_name: CSS Wuxi MW Exchange Support Doc Site
-
 theme:
   name: material
   palette:
-    - scheme: default
-      primary: blue
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
-    - scheme: slate
-      primary: blue
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to light mode
-
+  - scheme: default
+    primary: blue
+    toggle:
+      icon: material/toggle-switch-off-outline
+      name: Switch to dark mode
+  - scheme: slate
+    primary: blue
+    toggle:
+      icon: material/toggle-switch
+      name: Switch to light mode
 markdown_extensions:
-  - admonition
-  - pymdownx.details
-  - pymdownx.highlight:
-      linenums: true
-  - pymdownx.superfences
-
+- admonition
+- pymdownx.details
+- pymdownx.highlight:
+    linenums: true
+- pymdownx.superfences
+- pymdownx.keys
 nav:
-  - Administration: empty.md
-  - "Client Connectivity":
-     - ./client-connectivity/454-temporary-authentication-failure.md
-  - Compliance: empty.md
-  - Development: empty.md
-  - "Distribution Lists": empty.md
-  - "Mail Flow": empty.md
-  - Migration: empty.md
-  - "Public Folders": empty.md
-  - Setup: empty.md
+- Administration:
+  - empty.md
+- Client Connectivity:
+  - client-connectivity/454-temporary-authentication-failure.md
+- Compliance:
+  - empty.md
+- Development:
+  - empty.md
+- Distribution Lists:
+  - distribution-lists/template-doc.md
+  - distribution-lists/test-doc.md
+- Mail Flow:
+  - empty.md
+- Migration:
+  - empty.md
+- Public Folders:
+  - public-folders/test.md
+- Setup:
+  - empty.md
