@@ -1,0 +1,1084 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="站点的AD Trust损坏导致Kerberos验证失败">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.5">
+    
+    
+      
+        <title>454 4.7.0 Temporary Authentication Failure - CSS Wuxi MW Exchange Support Doc Site</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.be71726b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CSS Wuxi MW Exchange Support Doc Site" class="md-header__button md-logo" aria-label="CSS Wuxi MW Exchange Support Doc Site" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CSS Wuxi MW Exchange Support Doc Site
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              454 4.7.0 Temporary Authentication Failure
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m10-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CSS Wuxi MW Exchange Support Doc Site" class="md-nav__button md-logo" aria-label="CSS Wuxi MW Exchange Support Doc Site" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    CSS Wuxi MW Exchange Support Doc Site
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      <label class="md-nav__link" for="__nav_1">
+        Administration
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Administration" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Administration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../empty/" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Client Connectivity
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Client Connectivity" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Client Connectivity
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          454 4.7.0 Temporary Authentication Failure
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        454 4.7.0 Temporary Authentication Failure
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    问题描述
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    问题原因
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    解决办法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    排查过程
+  </a>
+  
+    <nav class="md-nav" aria-label="排查过程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#smtp-sendreceive-log" class="md-nav__link">
+    检查站点SMTP Send/Receive log
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hqapp-log" class="md-nav__link">
+    HQ站点App log
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#454-470-temporary-authentication-failure" class="md-nav__link">
+    搜索454 4.7.0 Temporary authentication failure文档
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nettimedc" class="md-nav__link">
+    NETTIME命令检查DC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kerberos" class="md-nav__link">
+    检查 Kerberos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#as" class="md-nav__link">
+    检查AS复制
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trust" class="md-nav__link">
+    检查父域与子域的Trust
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nltest" class="md-nav__link">
+    运行NLTEST
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trust_1" class="md-nav__link">
+    重置Trust
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    常见问题
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Compliance
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Compliance" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Compliance
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../empty/" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Development
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Development" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Development
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../empty/" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Distribution Lists
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Distribution Lists" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Distribution Lists
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../empty/" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Mail Flow
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Mail Flow" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Mail Flow
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../empty/" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
+        Migration
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Migration" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Migration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../empty/" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      <label class="md-nav__link" for="__nav_8">
+        Public Folders
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Public Folders" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Public Folders
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../empty/" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      <label class="md-nav__link" for="__nav_9">
+        Setup
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Setup" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Setup
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../empty/" class="md-nav__link">
+        No Items
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    问题描述
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    问题原因
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    解决办法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    排查过程
+  </a>
+  
+    <nav class="md-nav" aria-label="排查过程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#smtp-sendreceive-log" class="md-nav__link">
+    检查站点SMTP Send/Receive log
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hqapp-log" class="md-nav__link">
+    HQ站点App log
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#454-470-temporary-authentication-failure" class="md-nav__link">
+    搜索454 4.7.0 Temporary authentication failure文档
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nettimedc" class="md-nav__link">
+    NETTIME命令检查DC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kerberos" class="md-nav__link">
+    检查 Kerberos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#as" class="md-nav__link">
+    检查AS复制
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trust" class="md-nav__link">
+    检查父域与子域的Trust
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nltest" class="md-nav__link">
+    运行NLTEST
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trust_1" class="md-nav__link">
+    重置Trust
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    常见问题
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>454 4.7.0 Temporary Authentication Failure</h1>
+                
+                <h2 id="_1">问题描述</h2>
+<p>中心站点<strong>HQ</strong>在根域<code>cnc.intra</code>，部署了 <em>Exchange 2013</em>。</p>
+<p>分站点<strong>SD</strong>在子域<code>sd.cnc.intra</code>，部署了 <em>Exchange 2010</em>。</p>
+<p>在联通环境中，所有分站点的进出邮件，都要通过中心站点<strong>HQ</strong>。</p>
+<p>分站点<strong>SD</strong>的所有的入站邮件都无法到达，卡在<strong>HQ</strong>站点的Exchange 上，报错为：<code>454 4.7.0 Temporary authentication failure</code></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="go">C:\Windows\system32\Get-Queue M10-HQ-MLCEN01\50: f1</span>
+
+<span class="go">RunspaceId                : 5585d8f5-****-****-****-*********</span>
+<span class="go">DeliveryType              : SmtpRelayMailboxDeliveryGroup</span>
+<span class="go">NextHopDomain             : site:shandong; version: 14</span>
+<span class="go">TIsDomain                 : </span>
+<span class="go">SNextHopConnector         : 00000000-****-****-****-************</span>
+<span class="go">Status:                   : Retry</span>
+<span class="go">MessageCount              : 12481</span>
+<span class="hll"><span class="go">LastError                 : [&lt;LRI-2019/11/4 13:31:03&gt;; &lt;led-451 4.4.0 Primary target IP address responded with: &quot;454 4.7.0 Temporary authentication failure.&quot; Attempted to alternate host, but that did not succeed. Either there are no alternate hosts, or delivery failed to all alternate hosts. The last endpoint attempted was 10.**.**.***:**&gt;;&lt;FQDN-M10-SD-MLCH07.sd.cnc.intra&gt;;&lt;IP=10.**.**.***&gt;]</span>
+</span><span class="go">RetryCount                : 13</span>
+<span class="go">LastRetryTime             : 2019/11/4 13:31:03</span>
+<span class="go">NextRetryTime             : 2019/11/4 13:41:05</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="_2">问题原因</h2>
+<p>SD站点与HQ站点的AD Trust 损坏，导致站点间Kerberos验证失败。</p>
+<h2 id="_3">解决办法</h2>
+<p>在根域<code>cnc.intra</code>的DC上重置它与子域<code>sd.cnc.intra</code>的<code>trust</code>:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">netdom</span> <span class="n">trust</span> <span class="n">cnc</span><span class="p">.</span><span class="n">intra</span> <span class="p">/</span><span class="n">Domain</span><span class="p">:</span><span class="n">sd</span><span class="p">.</span><span class="n">cnc</span><span class="p">.</span><span class="n">intra</span> <span class="p">/</span><span class="n">UserD</span><span class="p">:&lt;</span><span class="n">cnc</span> <span class="n">Administrator</span><span class="p">&gt;</span> <span class="p">/</span><span class="n">PasswordD</span><span class="p">:*</span> <span class="p">/</span><span class="n">UserO</span><span class="p">:&lt;</span><span class="n">sd</span>  <span class="n">administrator</span><span class="p">&gt;</span> <span class="p">/</span><span class="n">PasswordO</span><span class="p">:*</span> <span class="p">/</span><span class="n">Reset</span> <span class="p">/</span><span class="n">TwoWay</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="_4">排查过程</h2>
+<h3 id="smtp-sendreceive-log">检查站点<code>SMTP Send/Receive log</code></h3>
+<p>HQ站点<code>SMTP Send log</code>中看到所有与<strong>SD</strong>站点的session之间都是显示：<code>Outbound Authentication failed with LogonDenied</code></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="go">2019-11-04T06:00:35.402Z,组织内 SMTP 发送连接器,08D760DF231F00BC,27,10.**.**.31:37964,10.**.**.168:25,*,,&quot;TLS protocol SP_PROT_TLS1_0_CLIENT negotiation succeeded using bulk encryption algorithm CALG_AES_256 with strength 256 bits, MAC hash algorithm CALG_SHA1 with strength 160 bits and key exchange algorithm CALG_ECDHE with strength 256 bits&quot;</span>
+<span class="go">2019-11-04T06:00:35.402Z,组织内 SMTP 发送连接器,08D760DF231F00BC,28,10.**.**.31:37964,10.**.**.168:25,*,,Received certificate</span>
+<span class="go">2019-11-04T06:00:35.402Z,组织内 SMTP 发送连接器,08D760DF231F00BC,29,10.**.**.31:37964,10.**.**.168:25,*,352D244A535D94B576232ECC4A4000CFE06BE106,Certificate thumbprint</span>
+<span class="go">2019-11-04T06:00:35.402Z,组织内 SMTP 发送连接器,08D760DF231F00BC,30,10.**.**.31:37964,10.**.**.168:25,&gt;,EHLO M10-HQ-MLCEN01.cnc.intra,</span>
+<span class="go">2019-11-04T06:00:35.402Z,组织内 SMTP 发送连接器,08D760DF231F00BC,31,10.**.**.31:37964,10.**.**.168:25,&lt;,250-M10-SD-MLCH04.sd.cnc.intra Hello [10.**.**.31],</span>
+<span class="go">2019-11-04T06:00:35.402Z,组织内 SMTP 发送连接器,08D760DF231F00BC,32,10.**.**.31:37964,10.**.**.168:25,&lt;,250-SIZE,</span>
+<span class="go">2019-11-04T06:00:35.402Z,组织内 SMTP 发送连接器,08D760DF231F00BC,33,10.**.**.31:37964,10.**.**.168:25,&lt;,250-PIPELINING,</span>
+<span class="go">2019-11-04T06:00:35.402Z,组织内 SMTP 发送连接器,08D760DF231F00BC,34,10.**.**.31:37964,10.**.**.168:25,&lt;,250-DSN,</span>
+<span class="go">2019-11-04T06:00:35.402Z,组织内 SMTP 发送连接器,08D760DF231F00BC,35,10.**.**.31:37964,10.**.**.168:25,&lt;,250-ENHANCEDSTATUSCODES,</span>
+<span class="go">2019-11-04T06:00:35.402Z,组织内 SMTP 发送连接器,08D760DF231F00BC,36,10.**.**.31:37964,10.**.**.168:25,&lt;,250-AUTH NTLM LOGIN,</span>
+<span class="go">2019-11-04T06:00:35.402Z,组织内 SMTP 发送连接器,08D760DF231F00BC,37,10.**.**.31:37964,10.**.**.168:25,&lt;,250-X-EXPS EXCHANGEAUTH GSSAPI NTLM,</span>
+<span class="go">2019-11-04T06:00:35.402Z,组织内 SMTP 发送连接器,08D760DF231F00BC,38,10.**.**.31:37964,10.**.**.168:25,&lt;,250-X-EXCHANGEAUTH SHA256,</span>
+<span class="go">2019-11-04T06:00:35.402Z,组织内 SMTP 发送连接器,08D760DF231F00BC,39,10.**.**.31:37964,10.**.**.168:25,&lt;,250-8BITMIME,</span>
+<span class="go">2019-11-04T06:00:35.402Z,组织内 SMTP 发送连接器,08D760DF231F00BC,40,10.**.**.31:37964,10.**.**.168:25,&lt;,250-BINARYMIME,</span>
+<span class="go">2019-11-04T06:00:35.402Z,组织内 SMTP 发送连接器,08D760DF231F00BC,41,10.**.**.31:37964,10.**.**.168:25,&lt;,250-CHUNKING,</span>
+<span class="go">2019-11-04T06:00:35.402Z,组织内 SMTP 发送连接器,08D760DF231F00BC,42,10.**.**.31:37964,10.**.**.168:25,&lt;,250-XEXCH50,</span>
+<span class="go">2019-11-04T06:00:35.402Z,组织内 SMTP 发送连接器,08D760DF231F00BC,43,10.**.**.31:37964,10.**.**.168:25,&lt;,250-XRDST,</span>
+<span class="go">2019-11-04T06:00:35.402Z,组织内 SMTP 发送连接器,08D760DF231F00BC,44,10.**.**.31:37964,10.**.**.168:25,&lt;,250 XSHADOW,</span>
+<span class="hll"><span class="go">2019-11-04T06:00:35.496Z,组织内 SMTP 发送连接器,08D760DF231F00BC,45,10.**.**.31:37964,10.**.**.168:25,*,,Outbound Authentication failed with LogonDenied</span>
+</span></code></pre></div>
+</td></tr></table>
+<blockquote>
+<p><strong>SD</strong>站点的<code>SMTP Receive log</code>中也是看到相同的报错。</p>
+</blockquote>
+<h3 id="hqapp-log"><strong>HQ</strong>站点<code>App log</code></h3>
+<p><strong>HQ</strong>站点的<code>App log</code>中，存在大量<code>2017 error</code>：</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">Time</span><span class="p">:</span>     <span class="n">11</span><span class="p">/</span><span class="n">4</span><span class="p">/</span><span class="n">2019</span> <span class="n">2</span><span class="p">:</span><span class="n">30</span><span class="p">:</span><span class="n">00</span> <span class="n">PM</span>
+<span class="n">ID</span><span class="p">:</span>       <span class="n">2017</span>
+<span class="n">Level</span><span class="p">:</span>    <span class="n">Error</span>
+<span class="n">Source</span><span class="p">:</span> <span class="n">MSExchangeTransport</span>
+<span class="n">Machine</span><span class="p">:</span>  <span class="n">M10-HQ-MLCEN01</span><span class="p">.</span><span class="n">cnc</span><span class="p">.</span><span class="n">intra</span>
+<span class="n">Message</span><span class="p">:</span>  <span class="n">Outbound</span> <span class="n">authentication</span> <span class="n">failed</span> <span class="n">with</span> <span class="n">error</span> <span class="n">LogonDenied</span> <span class="k">for</span> <span class="n">Send</span> <span class="n">connector</span> <span class="n">组织内</span> <span class="n">SMTP</span> <span class="n">发送连接器</span><span class="p">.</span> <span class="n">The</span> <span class="n">authentication</span> <span class="n">mechanism</span> <span class="n">is</span> <span class="n">ExchangeAuth</span><span class="p">.</span> <span class="n">The</span> <span class="n">target</span> <span class="n">is</span> <span class="n">SMTPSVC</span><span class="p">/</span><span class="n">M10-SD-MLCH02</span><span class="p">.</span><span class="n">sd</span><span class="p">.</span><span class="n">cnc</span><span class="p">.</span><span class="n">intra</span><span class="p">.</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="454-470-temporary-authentication-failure">搜索<code>454 4.7.0 Temporary authentication failure</code>文档</h3>
+<p>根据报错454 4.7.0 Temporary authentication failure搜到了一篇<a href="https://docs.microsoft.com/en-US/exchange/troubleshoot/client-connectivity/454-4-7-0-temporary-authentication-failure">官方KB</a>，情况都很符合。根据<a href="https://docs.microsoft.com/en-US/exchange/troubleshoot/client-connectivity/454-4-7-0-temporary-authentication-failure#resolution">Resolution</a>检查SD站点与HQ站点间Exchange/DC时间同步，没有问题。</p>
+<h3 id="nettimedc"><code>NETTIME</code>命令检查DC</h3>
+<p>当在HQ站点执行<code>NETTIME</code>命令查<strong>SD</strong>站点DC时，发现在<strong>HQ</strong>站点竟然没法Get到<strong>SD</strong>站点的DC。ADUC中也显示找不到域，原因是<em>用户名密码不正确</em>。</p>
+<p><img alt="Accessed to AD denied" src="../../images/ad-access-denial.jpg" /></p>
+<h3 id="kerberos">检查 <em>Kerberos</em></h3>
+<p>在<strong>HQ</strong>站点抓取网络包后发现 <em>Kerberos</em> 出现了Error（其中<code>10.**.**.15</code> 为<strong>SD</strong>站点DC，<code>10.**.**.31</code>为<strong>HQ</strong>站点Exchange）</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">217</span>
+<span class="normal">218</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="go">4:15:06 PM 11/4/2019    0.5359109                 10.**.**.31 10.**.**.15     KerberosV5         KerberosV5:TGS Request Realm: SD.CNC.INTRA Sname: SMTPSVC/M10-SD-MLCH01.sd.cnc.intra       {TCP:36, IPv4:35}</span>
+<span class="go">4:15:06 PM 11/4/2019    0.5460381                 10.**.**.15     10.**.**.31 KerberosV5         KerberosV5:KRB_ERROR  - KRB_AP_ERR_BAD_INTEGRITY (31)        {TCP:36, IPv4:35}</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="as">检查AS复制</h3>
+<p>我们检查<code>cnc.intra</code>和SD子域的AD复制，发现它们之间可以正常复制对方的分区。</p>
+<h3 id="trust">检查父域与子域的Trust</h3>
+<p>我们在父域上检查了它与SD子域的trust ，但是出现如下报错，而从SD子域的DC上验证到父域的DC则是正常的。</p>
+<p><img alt="AD trust" src="../../images/ad-trust.jpg" /></p>
+<h3 id="nltest">运行<code>NLTEST</code></h3>
+<p>我们同时尝试在父域的DC上运行<code>NLTEST /dclist:sd.cnc.intra</code>查询SD的DC列表也出现以下报错，由于DSGETDC function需要bind DC，而在没有Trust或Trust损坏的情况下都会出现如下报错：</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="gp">C:\&gt;</span>NLTEST /dclist:sd.cnc.intra
+<span class="gp">获得域&quot;sd.cnc.intra&quot;中DC的列表&lt;从&quot;\\M10-SD-DC24.sd.cnc.intra&quot;中&gt;</span>。
+<span class="gp">你没有权限访问到 sd.cnc.intra &lt;\\M10-SD-DC24.sd.cnc.intra&gt;</span> 的DsBind <span class="p">&lt;</span>尝试 NetServerEnum<span class="p">&gt;</span>。
+<span class="go">I_NetGetDCList 失败：Status = 6118 0x17e6 ERROR_NO_BROWSER_SERVERS_FOUND</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="trust_1">重置Trust</h3>
+<p>我们在SD域的DC上运行</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="gp">NETDOM TRUST &lt;parent domain&gt;</span> /Domain:<span class="p">&lt;</span>child domain<span class="p">&gt;</span> /UserD:<span class="p">&lt;</span>child domain admin<span class="p">&gt;</span>/PasswordD:* /UserO:<span class="p">&lt;</span>parent domain admin<span class="p">&gt;</span> /PasswordO:* /Reset /TwoWay
+</code></pre></div>
+</td></tr></table>
+<p>成功重置Trust</p>
+<h3 id="_5">测试</h3>
+<p>在等待两个域的DC成功复制到变更后，Trust 验证成功并且之前出现的AD报错消失。邮件流恢复正常。</p>
+<h2 id="_6">常见问题</h2>
+<details class="faq"><summary>如何验证AD Trust？</summary><p>Use <code>NLTEST</code> to <a href="https://social.technet.microsoft.com/wiki/contents/articles/16067.nltest-to-test-the-trust-relationship-between-a-workstation-and-domain.aspx">test the trust relationship between a workstation and domain</a> and to <a href="https://gallery.technet.microsoft.com/Use-NLTEST-to-test-domain-1a752686">test domain trust relationship</a></p>
+</details>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../empty/" class="md-footer__link md-footer__link--prev" aria-label="Previous: None" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              None
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../empty/" class="md-footer__link md-footer__link--next" aria-label="Next: None" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              None
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56a63758.min.js"></script>
+      
+    
+  </body>
+</html>
