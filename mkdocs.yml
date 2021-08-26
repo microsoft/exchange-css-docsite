@@ -29,13 +29,12 @@ nav:
 - Development:
   - empty.md
 - Distribution Lists:
-  - distribution-lists/template-doc.md
-  - distribution-lists/test-doc.md
+  - empty.md
 - Mail Flow:
   - empty.md
 - Migration:
   - empty.md
 - Public Folders:
-  - public-folders/test.md
+  - empty.md
 - Setup:
   - empty.md
