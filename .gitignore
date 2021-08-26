@@ -6,3 +6,5 @@ site/
 
 # Miscellaneous
 .DS_Store
+
+__pycache__/
